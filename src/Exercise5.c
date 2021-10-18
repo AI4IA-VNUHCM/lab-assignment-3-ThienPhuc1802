@@ -13,21 +13,29 @@ ______________________________________
 
 void Ex5(int arr[], int n){
 	int i,j;
+	int arrpositive[n];
+	int arrnegative[n];
+	int cp,cn;
+	cp =0;
+	cn=0;
 	for (int i = 0; i <n ; i++) {
-        for (int j = i + 1; j < n; j++) {
-			if (arr[i]<0 && arr[j]>0 ){
-             
-                int temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
-	
-            }
+		if (arr[i]>0){
+			arrpositive[cp]=arr[i];
+			cp++;
+		}
+		else{ 
+			arrnegative[cn]=arr[i];
+		 cn++;	
+		}
+       
 		}	 
-    }
-	for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);}
-	
-}
+	for (int i = 0; i < cp; i++) {
+        printf("%d ", arrpositive[i]);}
+
+	for (i=0;i<cn;i++){
+		printf("%d ", arrnegative[i]);
+	}
+} 
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
