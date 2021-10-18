@@ -12,9 +12,30 @@ ______________________________________
 #include <math.h>
 
 void Ex5(int arr[], int n){
-	//Your codes here
-	
-}
+	int i,j;
+	int arrpositive[n];
+	int arrnegative[n];
+	int cp,cn;
+	cp =0;
+	cn=0;
+	for (int i = 0; i <n ; i++) {
+		if (arr[i]>0){
+			arrpositive[cp]=arr[i];
+			cp++;
+		}
+		else{ 
+			arrnegative[cn]=arr[i];
+		 cn++;	
+		}
+       
+		}	 
+	for (int i = 0; i < cp; i++) {
+        printf("%d ", arrpositive[i]);}
+
+	for (i=0;i<cn;i++){
+		printf("%d ", arrnegative[i]);
+	}
+} 
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating

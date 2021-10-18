@@ -13,8 +13,24 @@ ______________________________________
 #include <math.h>
 
 int Ex4(int arr[], int n){
-	//Your codes here
+int i,j,c;
+c=1;
+for(i=0,j=1;i<n-1 && j<n;i++,j++){
 	
+	if(arr[i]<arr[j]){
+		c*=-1;
+	}
+	if(arr[i]>arr[j]){
+		 c*=2;
+	}
+	
+}
+	if (c==-1 || c==1)
+	return 1;
+	if (c>2)
+	return -1;
+	if (c<-1)
+	return 0;
 }
 
 int main(int argc, char *argv[]) {
